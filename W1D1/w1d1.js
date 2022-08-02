@@ -121,6 +121,6 @@ console.log(!NaN);
 console.log(!undefined);
 console.log(!0);
 console.log(!-0);
-console.log(!'');
+console.log('');
 
 console.log(!true);
