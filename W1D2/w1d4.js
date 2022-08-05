@@ -215,3 +215,4 @@ function factorArray(array, number) {
 console.log(factorArray([2, 3, 4, 5, 6], 20))
 console.log(factorArray([2,3,4,5,6], 35))
 console.log(factorArray([10,15,20,25], 5))
+
