@@ -75,13 +75,16 @@ function plusFive(num) {
 // threeOrSeven(42);  // => true
 // threeOrSeven(8);   // => false
 //
-function threeOrSeven(num) {
-    if (num % 3 === 0 || num % 7 === 0) {
-        return true
-    } 
-        return false
-}
+// function threeOrSeven(num) {
+//     if (num % 3 === 0 || num % 7 === 0) {
+//         return true
+//     } 
+//         return false
+// }
 
+function threeOrSeven(num){
+    return num % 3 === 0 ||  num % 7 === 0
+}
 console.log(threeOrSeven(3))
 console.log(threeOrSeven(42))
 console.log(threeOrSeven(8))
@@ -118,8 +121,13 @@ function yell(string) {
     let stringEx = string.toUpperCase() + "! ! !"
     return stringEx
   }
+
+//   function yell(string){
+//     return string.toUpperCase()
+//   }
   console.log(yell("I want to go to the store"))
   console.log(yell("Time to program"))
+
 
   // Write a function `whisper` that takes in a string and returns a "whispered" version
 // of that string.
@@ -131,7 +139,9 @@ function whisper(string) {
     let stringEx = "..." + string.toLowerCase() + "..."
     return stringEx
   }
-
+function whisper(string){
+    return `...${string.toLowerCase()}...`
+}
   console.log(whisper("Hey Anthony"))
   console.log(whisper("YEA! that was fun"))
 
@@ -146,13 +156,16 @@ function whisper(string) {
 // isSubstring("Jump for joy", "joys"); // => false
 //
 function isSubstring(searchString, subString) {
-    let lowerSearchStr = searchString.toLowerCase()
-    let lowerSubStr = subString.toLowerCase()
-
-    return lowerSearchStr.indexOf(lowerSubStr) !==1
+    if(searchString.toLowerCase().indexOf(subString.toLowerCase()) !== -1){
+        return true
+    } else{
+        return false
+    }
     
   }
   console.log(isSubstring("The cat went to the store", "he cat went"))
+  console.log(isSubstring("Time to program", "time"))
+  console.log(isSubstring("Jump for joy", "joys"))
 
   // Write a function `echo` that takes in a string and returns that string "echo-ized".
 //
@@ -162,8 +175,8 @@ function isSubstring(searchString, subString) {
 // echo("JUMp"); // => "JUMP ... JUMp ... jump"
 //
 function echo(string) {
-     let stringEx = string.toUpperCase() + " ... " + string + " ... " + string.toLowerCase()
-     return stringEx
+      return string.toUpperCase() + " ... " + string + " ... " + string.toLowerCase()
+     
   }
 
   console.log(echo("Mom!"))
@@ -178,11 +191,7 @@ function echo(string) {
 // isEven(2); // => true
 // isEven(5); // => false
 function isEven(num) {
-    if(num % 2 === 0){
-        return true
-    }  else {
         return !isOdd(num)
-    }
   }
 
   console.log(isEven(2))
@@ -201,6 +210,56 @@ function averageOfFour(num1, num2, num3, num4){
     return (num1 + num2 + num3 + num4)/4
 }
 
-console.log(averageOfFour(10,10,15,51))
+console.log(averageOfFour(10,10,15,5))
 console.log(averageOfFour(3,10,11,4))
 console.log(averageOfFour(1,2,3,4))
+
+function sayHello(name){
+    var msg = 'Hello, ' + name + '. How are you?'
+    return msg
+}
+
+console.log(sayHello('Joey'))
+
+function sayHello(name) {
+    var msg = 'Hello, ' + name + '. How are you?'
+    return msg
+}
+
+console.log(sayHello('George'))
+
+function checkNumber(num){
+    if(num > 0 ) {
+        return 'positive'
+    } else if (num < 0) {
+        return 'negative'
+    } else {
+        return 'zero'
+    }
+}
+
+console.log(checkNumber(5))
+
+function checkNumber(num){
+    if(num>0){
+        return 'positive'
+    } else if (num<0){
+        return 'negative'
+    } else{
+        return 'zero'
+    }
+}
+
+console.log(checkNumber(-5))
+
+function checkNumber(num){
+    if(num>0){
+        return 'positive'
+    } else if (num < 0){
+        return 'negative'
+    } else {
+        return 'zero'
+    }
+}
+
+console.log(checkNumber(0))
