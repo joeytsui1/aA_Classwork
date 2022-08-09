@@ -106,10 +106,24 @@ console.log(everyOtherWord('hello how are you doing on this lovely day'))
 // wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 
 function wordYeller(sentence) {
-    
+    let splitSen = sentence.split(' ')
+    let arr =[]
+    let puncs = ['.',',','!','?',';',':']
+
+    for (i = 0; i < splitSen.length; i++ ) {
+        let words = splitSen[i]
+        let lastChar = words.slice(- 1)
+
+        if (puncs.indexOf(lastChar) !== -1) { 
+            arr.push(words)
+        } else {
+            arr.push(words+ '!')
+        }
+    }
+    return arr.join(' ')
 
 }
-
+console.log(wordYeller("Stop it now! Please, wont you stop?"))
 // Write a function `arraySubstring(words, str)` that takes in an array of
 // strings and a string as arguments and returns an array where each element is
 // replaced with true if the string is a substring of the element and false if
