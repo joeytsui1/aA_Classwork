@@ -19,7 +19,6 @@ function avgValue(array) {
     return avg
     
 }
-
-console.log(avgValue[10,20])
+console.log(avgValue([10,20]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = avgValue;
