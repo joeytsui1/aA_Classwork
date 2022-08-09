@@ -17,12 +17,12 @@ let a2 = ['w', 'x', 'y'];
 let a3 = [1, 3, 7, 4];
 
 function diffArrayLen(arr1, arr2) {
-//     if (arr1.length === arr2.length) {
-//         return true
-//     } else {
-//         return false
-//     }
-   return arr1.length !== arr2.length
+    if (arr1.length === arr2.length) {
+        return false
+    } else {
+        return true
+    }
+   // return arr1.length !== arr2.length
 }
 
 console.log(diffArrayLen(a1 , a2))
