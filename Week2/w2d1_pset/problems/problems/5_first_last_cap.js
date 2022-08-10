@@ -24,6 +24,23 @@ function firstLastCap(sentence) {
     return arr.join(' ')
 }
 
+// function firstLastCap(sentence) {
+//     let arr = []
+//     let splitSen = sentence.split(' ') 
+
+//     for ( i = 0; i < splitSen.length; i++ ) {
+//         let words = splitSen[i]
+//         arr.push(capLowerCaseWord(words))
+//     }
+//     return arr.join(' ')
+// }
+
+// function capLowerCaseWord(words) {
+//     let firstChar = words[0].toUpperCase()
+//     let lastChar = words[words.length -1].toUpperCase()
+//     let midChar = words.slice(1, -1).toLowerCase()
+//     return firstChar + midChar + lastChar
+// }
 console.log(firstLastCap('hello BOOTCAMP PrEp'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = firstLastCap;
