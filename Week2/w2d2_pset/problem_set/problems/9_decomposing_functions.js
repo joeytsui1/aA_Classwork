@@ -53,6 +53,19 @@ while (arr.length < n){
   }
   return arr
 }
+// function firstNPrimes(n) { // 4
+//   let nPrimes = [];
+
+// for (let i = 2; nPrimes.length < n; i++) {
+//   if (isPrime(i)) {
+//     nPrimes.push(i);
+//     }
+//  return nPrimes
+//   }
+// }
+
+
+
 // console.log(firstNPrimes(4))
 /***********************************************************************
 Using `firstNPrimes`, write a function `sumOfNPrimes(n)` that returns
@@ -69,7 +82,7 @@ function sumOfNPrimes(n) {
   var sum = 0;
   var primes = firstNPrimes(n);
 
-  for (var i = 0;  i < primes.length; i += 1) {
+  for (var i = 0;  i < primes.length; i ++ ) {
     sum += primes[i];
   }
 

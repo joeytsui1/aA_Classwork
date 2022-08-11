@@ -1,4 +1,7 @@
 //Day 2
+
+const twoDimensionalTotal = require("../Week2/w2d3_pset/problem_set/problems/4_two_dimensional_total")
+
 // 1.
 function isOdd(num) {
     if ( num % 2 === 1) {
@@ -617,3 +620,479 @@ function firstOrLast (array) {
 
 firstOrLast(['Jenny', ' Mary', 'Mark'])
 firstOrLast(['Jenny', ' Mary', 'Mark', 'Joey'])
+
+// w2d2 problem set
+
+
+//1. 
+
+// Write a function `catBuilder(name, color, toys)` that returns a cat object
+// object with the corresponding properties. 
+
+function catBuilder (name, color, toys) {
+    let cat = {
+        name: name,
+        color: color,
+        toys: toys
+
+    }
+
+    return cat
+}
+
+function catBuilder (name , color, toys ) {
+    let cat = {}
+
+    cat.name = name
+    cat.color = color
+    cat.toys = toys
+
+    return cat
+}
+// 2.
+
+// Write a function `printObject(obj)` that prints out all key-value pairs
+// of an object. HINT: use a for loop.
+
+// Example:
+
+var bootcamp = {
+ name: 'App Academy',
+ color: 'Red',
+ population: 120,
+};
+
+printObj(bootcamp); // prints
+
+// `name - App Academy`
+// `color - Red`
+// `population - 120`
+
+function printObj (obj) {
+
+    for(let key in obj) {
+        let value  = obj[key]
+
+        console.log(key + ' - ' + value)
+
+    }
+}
+
+// 3. 
+// Write a function `getFullName(person)` that takes in an person object
+// and returns a string containing their full name.
+
+function getFullName (person) {
+    return person.firstName + ' ' + person.lastName
+}
+
+// 4
+
+//Write a function `valuePair(obj1, obj2, key)` that takes in two objects
+// and a key (string). The function should return an array containing the
+// corresponding values of the objects for the given key.
+
+// Examples:
+
+var object1 = {name: 'One', location: 'NY', age: 3};
+var object2 = {name: 'Two', location: 'SF'};
+
+valuePair(object1, object2, 'location'); // => [ 'NY', 'SF' ]
+valuePair(object1, object2, 'name'); // => [ 'One', 'Two' ]
+
+
+function valuePair (obj1, obj2, key) {
+    let arr = []
+
+    arr.push(obj1[key])
+    arr.push(obj2[key])
+
+    return arr
+}
+
+console.log(valuePair(object1, object2, 'location'))
+
+// 5.
+
+/***********************************************************************
+Write a function `doesKeyExist(obj, key)` that takes in an object and a
+key and returns true if the key is inside the object and false if the
+key is not inside the object.
+
+Examples:
+
+// var obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
+doesKeyExist(obj1, 'course'); // => true
+doesKeyExist(obj1, 'name'); // => false
+***********************************************************************/
+var obj1 = {bootcamp: 'App Academy', course: 'Bootcamp Prep'}
+
+function doesKeyExist(obj, key ) {
+    return obj[key] !== undefined
+}
+
+function doesKeyExist (obj, key) {
+    if (obj[key] === undefined) {
+        return false
+    } else {
+        return true
+    }
+}
+
+console.log(doesKeyExist(obj1, "course"))
+
+// 6. 
+
+/***********************************************************************
+Write a function `adults(people)` that takes in an array of person
+objects. The function should return an array containing the names of
+those who have an age of 18 or higher.
+
+Example:
+
+var ppl = [
+  {name: 'John', age: 20},
+  {name: 'Jim', age: 13},
+  {name: 'Jane', age: 18},
+  {name: 'Bob', age: 7}
+];
+
+adults(ppl); // => [ 'John', 'Jane' ]
+***********************************************************************/
+var ppl = [
+    {name: 'John', age: 20},
+    {name: 'Jim', age: 13},
+    {name: 'Jane', age: 18},
+    {name: 'Bob', age: 7}
+  ];
+
+function adults(people) {
+    let arr = [] 
+
+    for (i = 0; i < people.length; i++ ) {
+        let person = people[i]
+        let age = person.age
+        let name = person.name
+        if(age >= 18 ) {
+            arr.push(name)
+        }
+    }
+
+    return arr 
+}
+
+console.log(adults(ppl))
+
+/***********************************************************************
+Write a function `hasFavoriteFood(obj, food)` that takes in an object
+and a food string. The function should return true if the object has
+that favorite food. See the examples below.
+
+Examples:
+
+var dog = {
+  name: 'Fido',
+  favoriteFoods: ['chicken', 'sausage', 'scooby snacks']
+}
+
+hasFavoriteFood(dog, 'sausage'); // => true
+hasFavoriteFood(dog, 'cat food'); // => false
+
+var person = {
+  name: 'Al',
+  favoriteFoods: ['pizza', 'burgers', 'ramen']
+}
+
+hasFavoriteFood(person, 'burgers'); // => true
+hasFavoriteFood(person, 'fish'); // => false
+***********************************************************************/
+var dog = {
+    name: 'Fido',
+    favoriteFoods: ['chicken', 'sausage', 'scooby snacks']
+  }
+  
+  hasFavoriteFood(dog, 'sausage'); // => true
+  hasFavoriteFood(dog, 'cat food'); // => false
+  
+  var person = {
+    name: 'Al',
+    favoriteFoods: ['pizza', 'burgers', 'ramen']
+  }
+
+// function hasFavoriteFood (obj, food) {
+//     return obj.hasFavoriteFood.indexOf(food) > -1
+// }
+
+function hasFavoriteFood ( obj, food ) {
+    return obj.favoriteFoods.includes(food)
+}
+console.log(hasFavoriteFood(person, 'burgers'))
+console.log(hasFavoriteFood(person, 'fish'))
+
+// 8. 
+
+let peeps = [
+    {name: "Anthony", score: 2},
+    {name: "Winnie", score: 2},
+    {name: "Fred", score: 2},
+    {name: "Winnie", score: 2},
+    {name: "Fred", score: 2},
+    {name: "Anthony", score: 2},
+    {name: "Winnie", score: 2}
+  ];
+
+function countScores(people) {
+    let obj = {} 
+
+    for (i = 0; i < people.length; i ++ ) {
+        let peoples = people[i]
+        let name = peoples.name
+        let scores = peoples.score
+
+        if(obj[name] === undefined) {
+            obj[name] = scores
+        } else {
+            obj[name] += scores
+        }
+    }
+    return obj
+}
+
+console.log(countScores(peeps))
+
+// w2d3 problem set
+
+/***********************************************************************
+Write a function `peakFinder(array)` that takes in an array of numbers.
+It should return an array containing the indices of all the peaks. A
+peak is an element that is greater than both of its neighbors. If it is
+the first or last element, it is a peak if it is greater than its one
+neighbor. Assume the array has a length of at least 2.
+
+Hint: this can be solved using a single loop
+
+Examples:
+
+peakFinder([1, 2, 3, 2, 1]); //=> [2]
+peakFinder([2, 1, 2, 3, 4, 5]); //=> [0, 5]
+peakFinder([4, 6, 9, 4, 2, -7, 2, -4, 5]); //=> [2, 6, 8]
+***********************************************************************/
+function peakFinder (array) {
+    let arr = []
+
+    for (i = 0 ; i < array.length; i ++ ) {
+        if (i === 0 && array[i] > array[i + 1]) {
+            arr.push(i)
+        } else if ( i === array.length - 1 && array[i] > array (i-1)){ 
+            arr.push(i)
+        } else if ((array[i] > array[i + 1])&&array[i] > array[i - 1]){
+            arr.push(i)
+        }
+    }    
+    return arr
+}
+
+/***********************************************************************
+Write a function `divisibleByThreePairSum(array)` that takes an array of
+numbers. It should return an array of all the pairs of indices, whose
+elements sum to a multiple of three.
+
+Examples:
+
+var arr1 = divisibleByThreePairSum([1, 6, 3, 4, 2, 0]);
+arr1 //=> [[0, 4], [1, 2], [1, 5], [2, 5], [3, 4]]
+
+var arr2 = divisibleByThreePairSum([8, 3, 5, 9, 2]);
+arr2 //=> [[1, 3]]
+***********************************************************************/
+
+function divisibleByThreePairSum(array) {
+    let arr = []
+
+    for (i = 0; i < array.length; i++ ) {
+        for ( j = i + 1; j < array.length; j++ ) {
+            if ((array[i] + array[j]) % 3 === 0 ) {
+                arr.push([i,j])
+            }
+        }
+    }
+
+    return arr
+}
+
+/***********************************************************************
+Write a function `zipArray(arr1, arr2)` that takes in two arrays and
+"zips" them together by returning a single 2D-array. Assume that both
+input arrays have the same length.
+
+Examples:
+
+var a1 = ['a', 'b', 'c', 'd'];
+var a2 = [10, 20, 30, 40];
+
+var result = zipArray(a1, a2);
+result; // => [ [ 'a', 10 ], [ 'b', 20 ], [ 'c', 30 ], [ 'd', 40 ] ]
+***********************************************************************/
+function zipArray(arr1, arr2) {
+    let arr = []
+
+    for( i = 0 ; i < arr1.length; i ++ ) {
+        arr.push([arr1[i],arr2[i]])
+    }
+
+    return arr
+}
+/***********************************************************************
+Write a function `twoDimensionalTotal(array)` that takes in a 2D array
+of numbers and returns the total sum of all elements.
+
+var arr1 = [
+  [5, 2, 5, 3],
+  [12, 13],
+];
+
+twoDimensionalTotal(arr1); // => 40
+
+var arr2 = [
+  [2],
+  [1, 9],
+  [1, 1, 1]
+]
+
+twoDimensionalTotal(arr2); // => 15
+***********************************************************************/
+function twoDimensionalTotal (array) {
+    let sum = 0
+    for ( i =0; i < array.length; i++ ) {
+        for(j = 0; j < array[i].length; i++) {
+            let num = array[i][j]
+            sum += num
+        }
+    }
+    return sum 
+}
+/***********************************************************************
+Write a function `countInnerElement(arr)` that takes in a 2-D array of elements.
+Each element of 'arr' is a sub array that contains multiple elements. The number
+of elements contained in each sub array are not the same. We can assume each sub
+array contains at least one element. We should return an object that counts
+how many times each element in each sub array repeats.
+
+// Examples:
+// var arr1 = [
+//   [1,2,4,5],
+//   [2,7,4],
+//   [1,4,5,2,7]
+// ]
+
+// countInnerElement(arr1) // => {1: 2, 2: 3, 4: 3, 5: 2, 7: 2}
+
+// var arr2 = [
+//   ['a','b','c','d'],
+//   ['a','b'],
+//   ['a','c','d','a']
+// ]
+
+// countInnerElement(arr2) // => {a: 4, b: 2, c: 2, d: 2}
+***********************************************************************/
+function countInnerElement (arr) {
+    let counter = {}
+
+    for (i = 0; i < arr.length; i ++ ) {
+        for ( j= 0; j < arr[i].length; j++ ) {
+            let value = arr[i][j]
+
+            if(counter[value] === underfined){
+                counter[value] = 1
+            } else {
+                counter[value] += 1
+            }
+        }
+    }
+    return counter
+}
+/***********************************************************************
+Write a function `twoDiff(array)`, given an array of numbers, return a 2-D 
+array, where each of the sub array are indices of the two numbers such 
+that their difference is 2. If there are no such numbers, return an empty
+array.
+
+NOTE: The pairs are unique.
+HINT: Account for negative difference too!
+
+//Example:
+// twoDiff([2, 3, 4, 6, 1, 7]) // => [[0, 2], [1, 4], [2, 3]]
+// twoDiff([0, 2, 4, 3, 5]) // => [[0, 1], [1, 2], [3,4]]
+// twoDiff([]) // => []
+***********************************************************************/
+function twoDiff (array) {
+    let arr = []
+
+    for(i = 0; i < array.length; i ++ ) {
+        for(j = i + 1; i < array.length; j ++ ) {
+            if((array[i] - array[j] === 2) || (array[i] - array[j] === -2)) {
+                arr.push([i,j])
+            }
+        }
+    }
+
+    return arr
+}
+
+
+/***********************************************************************
+Write a function `arrayDiff(arr1, arr2)` that takes in two arrays. The 
+function should return a new array, containing the elements of arr1 that
+are not also in arr2.
+
+Note: Assume both arrays have unique elements.
+//Example:
+// array1 = [1,23,2,43,3,4]
+// array2 = [3, 23]
+// arrayDiff(array1, array2) // => [1, 2, 43 ,4]
+
+// array3 = ['a', 'ab', 'c', 'd', 'c']
+// array4 = ['d']
+// arrayDiff(array3, array4) // => ['a', 'ab', 'c', 'c']
+***********************************************************************/
+function arrayDiff (arr1, arr2) {
+    let arr = [] 
+
+    for( i = 0; i < arr1.length; i++ ) {
+        let arr1Value = arr1[i]
+        if(arr2.indexOf(arr1Value) < 0){
+            arr.push(i)
+        }
+    }
+
+    return arr
+}
+/***********************************************************************
+Write a function `valueCounter(obj, val)` that takes in an object and a 
+value, the function should return the number of times 'val' repeats as a
+value in 'obj'.
+
+//Example:
+// obj1 = {1: 'Anne', 2: 'Alvin', 3: 'Anne', 4: 'Anne'}
+// valueCounter(obj1, 'Anne') // => 3
+
+// obj2 = {Anne: 50, Alvin: 1, JJ: 100, Roman: 100}
+// valueCounter(obj2, 88) // => 0
+
+// pairs = {Anne: 'Roman', Alvin: 'Roman', JJ: 'Anne', Roman: 'Anne'}
+// valueCounter(pairs, 'Roman') // => 2
+***********************************************************************/
+
+function valueCounter (obj, val) {
+    let counter = 0
+
+    for( let key in obj) {
+        let value = obj[key]
+
+        if(value === val) {
+            counter += 1
+        }
+    }
+
+    return counter
+}

@@ -21,10 +21,15 @@ var person = {
 hasFavoriteFood(person, 'burgers'); // => true
 hasFavoriteFood(person, 'fish'); // => false
 ***********************************************************************/
-
-function hasFavoriteFood(obj, food) {
-  return obj.favoriteFoods.indexOf(food) > -1
+var person = {
+  name: 'Al',
+  favoriteFoods: ['pizza', 'burgers', 'ramen']
 }
 
+function hasFavoriteFood(obj, food) {
+  return obj.favoriteFoods.includes(food)
+}
+
+console.log(hasFavoriteFood(person, "burgers"))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = hasFavoriteFood;
