@@ -28,5 +28,19 @@ function twoDiff(array){
     return arr
 }
 
+function twoDiff(array){
+    let arr = [] 
+
+    for(i = 0; i < array.length; i ++ ) {
+        for ( j = i + 1; j < array.length; j++ ) {
+            if (Math.abs(array[i]-array[j]) === 2) {
+                arr.push([i,j])
+            }
+        }
+    }
+
+    return arr
+}
+
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = twoDiff;
