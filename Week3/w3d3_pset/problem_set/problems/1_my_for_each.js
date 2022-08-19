@@ -47,5 +47,13 @@ function myForEach (array, cb) {
     cb(ele, i, array)
   }
 }
+
+function myForEach (array, cb) {
+  for (let i = 0; i < array.length; i ++ ) {
+    let ele = array[i]
+
+    cb(ele, i, array)
+  }
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = myForEach;

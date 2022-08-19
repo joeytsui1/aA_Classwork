@@ -22,6 +22,16 @@ function commonFactors(num1, num2) {
     return arr
 }
 
+function commonFactors (num1, num2) {
+    let arr = []
+
+    for (let i = 0; i < num1 * num2; i++ ) {
+        if ((num1 % i === 0) && (num2 % i === 0)) {
+            arr.push(i)
+        }
+    }
+    return arr
+}
 console.log(commonFactors(12, 50))
 console.log(commonFactors(45, 60))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -27,10 +27,6 @@ function myEvery(arr, cb) {
   return true
 }
 
-function isEven(num) {
-  return num % 2 === 0;
-}
-
 function myEvery (arr, cb) {
   for (let i = 0; i < arr.length; i ++ ) {
     let ele = arr[i]
@@ -40,6 +36,17 @@ function myEvery (arr, cb) {
     }
   }
   return true // if it goes through the full for loop and its all true then the function will return true 
+}
+
+function myEvery (arr, cb) {
+  for (let i = 0; i < arr.length; i ++ ) {
+    let ele =arr[i]
+
+    if (cb(ele) === false) {
+      return false
+    }
+  }
+  return true
 }
 myEvery([10, 4, 8, 20], isEven)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

@@ -16,12 +16,23 @@ powerSequence(2, 6); // => [ 2, 4, 8, 16, 32, 64 ]
 powerSequence(8, 3); // => [ 8, 64, 512 ]
 ***********************************************************************/
 
-function powerSequence(base, length) {
+// function powerSequence(base, length) {
+//     let arr = []
+//     let product = 1
+    
+//     for (let i = 1; i <= length; i++) {
+//         arr.push(product *= base)
+//     }
+//     return arr
+// }
+
+function powerSequence (base, length) {
     let arr = []
     let product = 1
-    
-    for (let i = 1; i <= length; i++) {
-        arr.push(product *= base)
+    for (let i = 1; i <= length; i ++) {
+       product *= base
+
+       arr.push(product)
     }
     return arr
 }

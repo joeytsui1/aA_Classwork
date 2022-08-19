@@ -21,6 +21,17 @@ function hasAllVowels(str) {
     }
     return true
 }
+
+function hasAllVowels (str) {
+    let vowels = "aeiou".split('')
+    
+    for (let i = 0; i < vowels.length; i ++) {
+        if (!str.includes(vowels[i])) {
+            return false
+        }
+    }
+    return true
+}
 console.log(hasAllVowels('have you gone biking?'))
 console.log(hasAllVowels('bootcamp prep'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

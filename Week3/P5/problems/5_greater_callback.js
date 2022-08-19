@@ -16,6 +16,15 @@ function greaterCallback(num, cb1, cb2) {
     return cb2(num)
   }
 }
-greaterCallback(25, Math.abs, Math.sqrt)
+
+function greaterCallback (num, cb1, cb2) {
+  if (cb1(num) > cb2(num)) {
+    return cb1(num)
+  } else {
+    return cb2(num)
+  }
+}
+console.log(greaterCallback(25, Math.abs, Math.sqrt))
+console.log(greaterCallback(16.6, Math.floor, Math.ceil))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = greaterCallback;

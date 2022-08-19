@@ -38,14 +38,30 @@ var assessments2 = [
   {number: 3, score: 45}
 ];
 
-function isPassing(assessments) {
+// function isPassing(assessments) {
+//   let sum = 0
+
+//   for (let i = 0; i < assessments.length; i++ ) {
+//     let ele = assessments[i]
+
+//     sum = sum + ele.score
+//     let avg = sum / assessments.length
+
+//     if (avg >= 70) {
+//       return true
+//     } 
+//   }
+//   return false
+// }
+
+function isPassing(assessment) {
   let sum = 0
 
-  for (let i = 0; i < assessments.length; i++ ) {
-    let ele = assessments[i]
+  for (let i = 0; i < assessment.length; i++) {
+    let ele = assessment[i]
 
     sum = sum + ele.score
-    let avg = sum / assessments.length
+    let avg = sum / assessment.length
 
     if (avg >= 70) {
       return true
@@ -53,7 +69,6 @@ function isPassing(assessments) {
   }
   return false
 }
-
 console.log(isPassing(assessments1))
 console.log(isPassing(assessments2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/

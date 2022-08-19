@@ -35,6 +35,29 @@ function commonPrimeFactors(num1, num2) {
     return arr
 }
 
+function isPrime (num) {
+    if (num < 2) {
+        return false
+    }
+
+    for (let j = 2; j < num; j++) {
+        if (num % j === 0) {
+            return false
+        }
+    }
+    return true
+}
+
+function commonPrimeFactors (num1, num2) {
+    let arr = []
+
+    for (let i = 1; i <= num1 * num2; i++) {
+        if ((num1 % i === 0) && (num2 % i === 0) && isPrime(i)) {
+            arr.push(i)
+        }
+    }
+    return arr
+}
 console.log(commonPrimeFactors(45, 60))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = commonPrimeFactors;

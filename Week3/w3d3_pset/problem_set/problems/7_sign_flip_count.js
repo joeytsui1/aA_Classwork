@@ -25,6 +25,19 @@ function signFlipCount(numbers) {
     }
     return counter
 }
+
+function signFlipCount (numbers) {
+    let counter = 0
+
+    for (let i = o; i < numbers.length; i++ ) {
+        let num = numbers[i]
+
+        if (num * numbers[i + 1] < 0) {
+            counter += 1
+        }
+    }
+    return counter
+}
 console.log(signFlipCount([-1, 11.3, -3, 100]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = signFlipCount;

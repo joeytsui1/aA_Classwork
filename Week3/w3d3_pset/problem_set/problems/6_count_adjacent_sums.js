@@ -21,5 +21,17 @@ function countAdjacentSums(arr, n) {
     return counter
 }
 
+function countAdjacentSums (arr, n) {
+    let counter = 0
+
+    for (let i = 0; i < arr.length; i++ ) {
+        let ele = arr[i]
+
+        if (ele + arr[i+1] === n) {
+            counter += 1
+        }
+    }
+    return counter
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = countAdjacentSums;

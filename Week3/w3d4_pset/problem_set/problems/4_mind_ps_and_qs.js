@@ -19,17 +19,36 @@ mindPsAndQs('PPPXQPPPQ'); // => 5
 ***********************************************************************/
 
 
-function mindPsAndQs(str) {
+// function mindPsAndQs(str) {
+//     let counter = 0
+//     let highest = 0
+
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i]
+
+//         if (char === 'P' || char === 'Q') {
+//             counter += 1
+//             if (counter > highest) {
+//                 highest = counter
+//             }
+//         } else {
+//             counter = 0
+//         }
+//     }
+//     return highest
+// }
+
+function mindPsAndQs (str) {
     let counter = 0
     let highest = 0
 
-    for (let i = 0; i < str.length; i++) {
+    for (let i = 0; i < str.length; i++ ) {
         let char = str[i]
 
-        if (char === 'P' || char === 'Q') {
+        if ((char === "P") || (char === "Q")) {
             counter += 1
-            if (counter > highest) {
-                highest = counter
+            if (counter > highest){
+                highest = counter 
             }
         } else {
             counter = 0

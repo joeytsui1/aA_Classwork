@@ -11,25 +11,53 @@ favoriteWord('a', 'sinful caesar sipped his snifter') //=> 'caesar'
 favoriteWord('s', 'sinful caesar sipped his snifter') //=> 'sinful'
 favoriteWord('x', 'sinful caesar sipped his snifter') //=> ''
 ***********************************************************************/
-function wordss (word, char) {
+// function wordss (word, char) {
+//     let counter = 0
+
+//     for (let i = 0; i < word.length; i++ ) {
+//         if (word[i] === char) {
+//             counter += 1
+//         }
+//     }
+//     return counter
+// }
+
+// function favoriteWord(favoriteLetter, sentence) {
+    
+//     let words = sentence.split(' ')
+//     let faveWord = ''
+
+//     for (let i = 0; i < words.length; i ++ ) {
+//         let word = words[i]
+
+//         if (wordss (faveWord, favoriteLetter) < wordss(word,favoriteLetter)){
+//             faveWord = word
+//         }
+//     }
+//     return faveWord
+// }
+
+function wordss(word, char) {
     let counter = 0
 
-    for (let i = 0; i < word.length; i++ ) {
-        if (word[i] === char) {
+    for (let i = 0; i < word.length; i++) {
+        let ele = word[i]
+
+        if (ele === char) {
             counter += 1
         }
     }
     return counter
 }
 
-function favoriteWord(favoriteLetter, sentence) {
-    
+function favoriteWord (favoriteLetter, sentence) {
     let words = sentence.split(' ')
     let faveWord = ''
-    for (let i = 0; i < words.length; i ++ ) {
+
+    for (let i = 0; i < words.length; i++ ) {
         let word = words[i]
 
-        if (wordss (faveWord, favoriteLetter) < wordss(word,favoriteLetter)){
+        if (wordss(faveWord, favoriteLetter) < wordss(word, favoriteLetter)) {
             faveWord = word
         }
     }

@@ -48,7 +48,7 @@ var students1 = [
   function printStudents(students) {
     for (let i = 0; i < students.length; i++) {
         let student = students[i]
-        console.log(student.name + ' is student #' + i)
+        console.log(student.name + ' is student #' + student.id)
     }
   }
   
@@ -82,12 +82,16 @@ var students1 = [
   // Pawandeep 92
 
   function bestGrade(grades) {
-    var best = grades[0].score;
-    for (var i = 1; i < grades.length; i += 1) {
-      var grade = grades[i];
-      if (grade.score > best) { best = grade.score; }
+    let highest = grades[0].score
+
+    for ( let i = 0; i < grades.length; i ++ ) {
+      let grade = grades[i]
+
+      if (grade.score > highest) {
+        highest = grade.score
+      }
     }
-    return best;
+    return highest
   }
 
   function printBestGrade(students) {
@@ -95,11 +99,11 @@ var students1 = [
     for (let i = 0; i < students.length; i ++ ) {
         let student = students[i]
         
-        console.log(student.name, bestGrade(student.score))
+        console.log(student.name, bestGrade(student.grades))
     }
   }
   
-//   printBestGrade(students3); // uncomment when ready to test
+  printBestGrade(students3); // uncomment when ready to test
   
   
   // Write a function that will print the name of the student and their average test score

@@ -34,7 +34,18 @@ function myMap (arr, cb) {
   for (let i = 0; i < arr.length; i ++ ) {
     let ele = arr[i]
 
-    array.push[cb(ele, i, arr)]
+    array.push(cb(ele, i, arr))
+  }
+  return array
+}
+
+function myMap (arr, cb) {
+  let array = []
+
+  for (let i = 0; i < arr.length; i++ ) {
+    let ele = arr[i]
+
+    array.push(cb(ele, i, arr))
   }
   return array
 }

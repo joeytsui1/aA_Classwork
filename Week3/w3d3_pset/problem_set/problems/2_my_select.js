@@ -38,18 +38,23 @@ function mySelect(arr, cb) {
   return array
 }
 
-function isEven(num) {
-  return num % 2 === 0;
-}
+function mySelect (arr, cb) {
+  let array = []
 
-function isNegative(num) {
-  return num < 0;
+  for (let i = 0; i < arr.length; i++ ) {
+    let ele = arr[i]
+
+    if (cb(ele, i, arr)) {
+      array.push(ele)
+    }
+  }
+  return array
 }
 
 function mySelect (arr, cb) {
   let array = []
 
-  for (let i = 0; i < arr.length; i++ ) {
+  for (let i = 0; i < arr.length; i ++) {
     let ele = arr[i]
 
     if (cb(ele, i, arr)) {

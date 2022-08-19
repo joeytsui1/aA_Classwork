@@ -10,17 +10,30 @@ collapseString('AAAaalviiiiin!!!'); //=> 'Aalvin!'
 collapseString('hello   app academy'); //=> 'helo ap academy'
 ***********************************************************************/
 
-function collapseString(str) {
-    let newSen = ''
+// function collapseString(str) {
+//     let newSen = ''
 
-    for (let i = 0; i < str.length; i++ ) {
+//     for (let i = 0; i < str.length; i++ ) {
+//         let char = str[i]
+
+//         if (char !== newSen[newSen.length-1]) {
+//             newSen += char
+//         }
+//     }
+//     return newSen
+// }
+
+function collapseString (str) {
+    let string = ''
+
+    for (let i = 0; i < str.length; i++) {
         let char = str[i]
 
-        if (char !== newSen[newSen.length-1]) {
-            newSen += char
+        if (char !== string[string.length-1]) {
+            string += char
         }
     }
-    return newSen
+    return string
 }
 
 console.log(collapseString('hello   app academy'))

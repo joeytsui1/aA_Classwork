@@ -10,11 +10,13 @@ variableNameify(['remove', 'last', 'vowel']) => 'removeLastVowel'
 variableNameify(['MaX', 'VALUE']) => 'maxValue'
 *******************************************************************************/
 
-function variableNameify(words) {
+
+function variableNameify (words) {
   let str = ''
-  for (let i = 0; i < words.length; i++ ) {
+
+  for (let i = 0; i < words.length; i++) {
     let word = words[i]
-    
+
     if (i === 0) {
       str += word.toLowerCase()
     } else {
@@ -24,6 +26,9 @@ function variableNameify(words) {
   return str
 }
 
+
+console.log(variableNameify(['is', 'prime']))
 console.log(variableNameify(['MaX', 'VALUE']))
+console.log(variableNameify(['remove', 'last', 'vowel']))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = variableNameify;

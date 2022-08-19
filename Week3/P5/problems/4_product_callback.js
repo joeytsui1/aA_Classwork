@@ -9,12 +9,18 @@ productCallback(-2, 6, Math.abs) // => 12
 productCallback(12, 3, Math.sqrt) // => 6
 *******************************************************************************/
 
-function productCallback(num1, num2, cb) {
+// function productCallback(num1, num2, cb) {
+//   let product = num1 * num2
+
+//   return cb(product)
+// }
+
+function productCallback (num1, num2, cb) {
   let product = num1 * num2
 
   return cb(product)
 }
-
-productCallback(-2, 6, Math.abs)
+console.log(productCallback(-2, 6, Math.abs))
+console.log(productCallback(12, 3, Math.sqrt))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = productCallback;

@@ -25,19 +25,29 @@ var arr2 = [
   ['Oscar', 'Patrick']
 ];
 
-function reverse2D(array) {
+// function reverse2D(array) {
+//   let str = ''
+
+//   for (let i = array.length-1; i >= 0; i-- ) { // starts the loop at the last array in the outer array
+
+//     for (let j = array[i].length -1 ; j >= 0; j--) { // starts the loop at the last ele of the inner arrays
+
+//       str += array[i][j]
+//     }
+//   }
+//   return str
+// }
+
+function reverse2D (array) {
   let str = ''
 
-  for (let i = array.length-1; i >= 0; i-- ) { // starts the loop at the last array in the outer array
-
-    for (let j = array[i].length -1 ; j >= 0; j--) { // starts the loop at the last ele of the inner arrays
-
+  for (let i = array.length -1; i >= 0; i--) {
+    for (let j = array[i].length - 1; j >= 0; j-- ) {
       str += array[i][j]
     }
   }
   return str
 }
-
 console.log(reverse2D(arr2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = reverse2D;

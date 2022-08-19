@@ -26,10 +26,6 @@ function mySome(arr, cb) {
   return false
 }
 
-function isNegative(num) {
-  return num < 0;
-}
-
 function mySome (arr ,cb) {
   for (let i = 0; i < arr.length; i++ ) {
     let ele = arr[i]
@@ -38,6 +34,17 @@ function mySome (arr ,cb) {
       return true
     }
   }return false // the function will return false if all the ele in the array is positive 
+}
+
+function mySome (arr, cb) {
+  for (let i = 0; i < arr.length; i++ ) {
+    let ele = arr[i]
+
+    if (cb(ele) === true) {
+      return true
+    }
+  }
+  return false
 }
 mySome([10, -10, 11, 4], isNegative);
 mySome([2, 4, 6, 8], isNegative);
