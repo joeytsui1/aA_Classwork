@@ -11,6 +11,21 @@ variableNameify(['MaX', 'VALUE']) => 'maxValue'
 *******************************************************************************/
 
 
+// function variableNameify (words) {
+//   let str = ''
+
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i]
+
+//     if (i === 0) {
+//       str += word.toLowerCase()
+//     } else {
+//       str += word.slice(0,1).toUpperCase() + word.slice(1).toLowerCase()
+//     }
+//   }
+//   return str
+// }
+
 function variableNameify (words) {
   let str = ''
 
@@ -20,13 +35,11 @@ function variableNameify (words) {
     if (i === 0) {
       str += word.toLowerCase()
     } else {
-      str += word.slice(0,1).toUpperCase() + word.slice(1).toLowerCase()
+      str += word.slice(0, 1).toUpperCase() + word.slice(1).toLowerCase()
     }
   }
   return str
 }
-
-
 console.log(variableNameify(['is', 'prime']))
 console.log(variableNameify(['MaX', 'VALUE']))
 console.log(variableNameify(['remove', 'last', 'vowel']))

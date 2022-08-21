@@ -38,12 +38,23 @@ var arr2 = [
 //   return str
 // }
 
-function reverse2D (array) {
+// function reverse2D (array) {
+//   let str = ''
+
+//   for (let i = array.length -1; i >= 0; i--) {
+//     for (let j = array[i].length - 1; j >= 0; j-- ) {
+//       str += array[i][j]
+//     }
+//   }
+//   return str
+// }
+
+function reverse2D (arr) {
   let str = ''
 
-  for (let i = array.length -1; i >= 0; i--) {
-    for (let j = array[i].length - 1; j >= 0; j-- ) {
-      str += array[i][j]
+  for (let i = arr.length -1; i >= 0; i-- ) {
+    for (let j = arr[i].length -1; j >= 0; j--) {
+      str += arr[i][j]
     }
   }
   return str

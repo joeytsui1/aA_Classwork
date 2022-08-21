@@ -33,6 +33,14 @@ function threeIncreasing (arr) {
     return false
 }
 
+function threeIncreasing (arr) {
+    for (let i = 0; i < arr.length; i ++) {
+        if ((arr[i + 2] - arr[i] === 2) && (arr[i + 1] - arr[i] === 1)) {
+            return true
+        }
+    }
+    return false
+}
 console.log(threeIncreasing([3, 2, 11, 12, 13, 2, 4]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = threeIncreasing;

@@ -26,34 +26,43 @@ var obj2 = {
   locations: ['SF', 'NY']
 }
 
-function objectSize(obj) {
-  let arr = []
-  let counter = 0
+// function objectSize(obj) {
+//   let arr = []
+//   let counter = 0
 
-  for (let key in obj) {
+//   for (let key in obj) {
 
-    if (!(arr.includes(key))) {
-      arr.push(key)
-    }
-  }
+//     if (!(arr.includes(key))) {
+//       arr.push(key)
+//     }
+//   }
 
-  for (let i = 0; i < arr.length; i ++ ) {
-    counter += 1
-  }
-  return counter
-}
+//   for (let i = 0; i < arr.length; i ++ ) {
+//     counter += 1
+//   }
+//   return counter
+// }
+
+// function objectSize (obj) {
+//   let arr = []
+//   let counter = 0
+
+//   for (let key in obj) {
+//     if (!arr.includes(key)) {
+//       arr.push(key)
+//     }
+//   }
+
+//   for (let i = 0; i < arr.length; i ++) {
+//     counter += 1
+//   }
+//   return counter
+// }
 
 function objectSize (obj) {
-  let arr = []
   let counter = 0
 
   for (let key in obj) {
-    if (!arr.includes(key)) {
-      arr.push(key)
-    }
-  }
-
-  for (let i = 0; i < arr.length; i ++) {
     counter += 1
   }
   return counter

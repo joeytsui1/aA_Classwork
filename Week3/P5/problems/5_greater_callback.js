@@ -24,6 +24,15 @@ function greaterCallback (num, cb1, cb2) {
     return cb2(num)
   }
 }
+
+function greaterCallback (num1, cb1, cb2) {
+  if (cb1(num1) > cb2(num1)) {
+    return cb1(num1)
+  } else {
+    return cb2(num1)
+  }
+}
+
 console.log(greaterCallback(25, Math.abs, Math.sqrt))
 console.log(greaterCallback(16.6, Math.floor, Math.ceil))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
