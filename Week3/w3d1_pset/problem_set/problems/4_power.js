@@ -16,19 +16,28 @@ power(11, 0); // => 1
 power(11, 1); // => 11
 ***********************************************************************/
 
-function power(base, exp) {
-    let product = 1
+// function power(base, exp) {
+//     let product = 1
     
-    for (let i = 1; i <= exp; i ++) {
-        product *= base
-    }
-    return product
-}
+//     for (let i = 1; i <= exp; i ++) {
+//         product *= base
+//     }
+//     return product
+// }
+
+// function power (base, exp) {
+//     let product = 1
+
+//     for (let i = 1; i <= exp; i ++ ) {
+//         product *= base
+//     }
+//     return product
+// }
 
 function power (base, exp) {
     let product = 1
-
-    for (let i = 1; i <= exp; i ++ ) {
+    
+    for (let i = 1; i <= exp; i++ ) {
         product *= base
     }
     return product

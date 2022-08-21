@@ -54,21 +54,38 @@ var assessments2 = [
 //   return false
 // }
 
-function isPassing(assessment) {
+// function isPassing(assessment) {
+//   let sum = 0
+
+//   for (let i = 0; i < assessment.length; i++) {
+//     let ele = assessment[i]
+
+//     sum = sum + ele.score
+//     let avg = sum / assessment.length
+
+//     if (avg >= 70) {
+//       return true
+//     } 
+//   }
+//   return false
+// }
+
+function isPassing (assessment) {
   let sum = 0
 
   for (let i = 0; i < assessment.length; i++) {
-    let ele = assessment[i]
+    let people = assessment[i]
+    sum = sum + people.score
 
-    sum = sum + ele.score
     let avg = sum / assessment.length
 
     if (avg >= 70) {
       return true
-    } 
+    }
   }
   return false
 }
+
 console.log(isPassing(assessments1))
 console.log(isPassing(assessments2))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
