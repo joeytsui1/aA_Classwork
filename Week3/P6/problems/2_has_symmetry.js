@@ -15,24 +15,34 @@ hasSymmetry(['cat', 'dog', 'bird', 'dog', 'cat']) => true
 hasSymmetry(['cat', 'dog', 'bird', 'bird', 'cat']) => false
 *******************************************************************************/
 
+// function hasSymmetry(array) {
+//   for (let i = 0; i < array.length; i++) {
+
+//     if (array[i] !== array[array.length - 1 - i] ) {
+//       return false
+//     }
+//   }
+//   return true
+// }
+
 function hasSymmetry(array) {
+
   for (let i = 0; i < array.length; i++) {
 
-    if (array[i] !== array[array.length - 1 - i] ) {
+    if (array[i] !== array[array.length -1 -i]) {
       return false
     }
   }
   return true
 }
 
-
 // function hasSymmetry (array) {
 //   for (let i = 0; i < array.length; i++) {
 //     let iValue = array[i]
-
+//     // i = 0
 //     for (let j = array.length - 1; j >= 0; j--) {
 //       let jValue = array[j]
-
+//       // last index - 1
 //       if (iValue !== jValue) {
 //         return false
 //       }
@@ -41,6 +51,6 @@ function hasSymmetry(array) {
 //   return true
 // }
 
-console.log(hasSymmetry([1, 2, 3, 3, 2, 1]))
+// console.log(hasSymmetry([1, 2, 3, 3, 2, 1]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = hasSymmetry;

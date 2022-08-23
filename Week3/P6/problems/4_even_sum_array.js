@@ -8,28 +8,49 @@ Examples:
 evenSumArray([6, 7, 5]) => [ 12, 12, 6 ]
 evenSumArray([2, 8, 3, 5]) => [ 2, 20, 2, 6 ]
 *******************************************************************************/
-function isEven (num) {
+// function isEven (num) {
+//   let sum = 0
+
+//   for (let j = 0; j <= num; j++ ) {
+
+//     if (j % 2 === 0) {
+//       sum += j
+//     }
+//   }
+//   return sum
+// }
+// function evenSumArray(array) {
+//   let arr = []
+
+
+//   for (let i = 0; i < array.length; i++) {
+//     let num = array[i]
+    
+//     arr.push(isEven(num))
+//   }
+//   return arr
+// }
+function isEvenSum (num) {
   let sum = 0
 
-  for (let j = 0; j <= num; j++ ) {
-
-    if (j % 2 === 0) {
-      sum += j
+  for (let i = 0; i <= num; i++ ) {
+    if (i % 2 === 0) {
+      sum += i
     }
   }
   return sum
 }
-function evenSumArray(array) {
-  let arr = []
 
+function evenSumArray (array) {
+  let arr = []
 
   for (let i = 0; i < array.length; i++) {
     let num = array[i]
-    
-    arr.push(isEven(num))
+
+    arr.push(isEvenSum(num))
   }
   return arr
-}
+} 
 console.log(evenSumArray([6, 7, 5]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*************************/
 module.exports = evenSumArray;

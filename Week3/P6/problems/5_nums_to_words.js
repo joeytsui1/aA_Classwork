@@ -10,25 +10,50 @@ numsToWords('123') => 'OneTwoThree'
 numsToWords('159598') => 'OneFiveNineFiveNineEight'
 *******************************************************************************/
 
-function numsToWords(numString) {
-  let numObj = {
-    1: "One",
-    2: "Two",
-    3: "Three",
-    4: "Four", 
-    5: "Five",
-    6: "Six",
-    7: "Seven",
-    8: "Eight",
-    9: "Nine"
-  }
+// function numsToWords(numString) {
+//   let numObj = {
+//     1: "One",
+//     2: "Two",
+//     3: "Three",
+//     4: "Four", 
+//     5: "Five",
+//     6: "Six",
+//     7: "Seven",
+//     8: "Eight",
+//     9: "Nine"
+//   }
+
+//   let str = ''
+
+//   for (let i = 0; i < numString; i++) {
+//     let num = numString[i]
+
+//     if (numObj[num] !== undefined) {
+//       str += numObj[num]
+//     }
+//   }
+//   return str
+// }
+let numObj = {
+  1: "One",
+  2: "Two",
+  3: "Three",
+  4: "Four", 
+  5: "Five",
+  6: "Six",
+  7: "Seven",
+  8: "Eight",
+  9: "Nine"
+}
+
+function numsToWords (numString) {
 
   let str = ''
 
-  for (let i = 0; i < numString; i++) {
+  for (let i = 0; i < numString; i++ ) {
     let num = numString[i]
 
-    if (numObj[num] !== undefined) {
+    if(numObj[num] !== undefined) {
       str += numObj[num]
     }
   }

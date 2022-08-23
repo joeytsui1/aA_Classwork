@@ -12,20 +12,36 @@ vowelShift('hello world'); // => 'hillu wurld'
 vowelShift('on the hunt'); // => 'un thi hant'
 ***********************************************************************/
 
-function vowelShift(sentence) {
-    let vowels = ['a', 'e', 'i', 'o', 'u']
-    let newStr = ''
+// function vowelShift(sentence) {
+//     let vowels = ['a', 'e', 'i', 'o', 'u']
+//     let newStr = ''
 
-    for (let i = 0; i < sentence.length; i ++) {
+//     for (let i = 0; i < sentence.length; i ++) {
+//         let char = sentence[i]
+
+//         if (vowels.indexOf(char) > -1) {
+//             newStr += vowels[(vowels.indexOf(char) + 1) % 5]
+//         } else {
+//             newStr += char
+//         }
+//     }
+//     return newStr
+// }
+
+function vowelShift (sentence) {
+    var vowels = ['a', 'e', 'i', 'o', 'u'];
+    let str = ""
+
+    for (let i = 0; i < sentence.length; i++ ) {
         let char = sentence[i]
 
         if (vowels.indexOf(char) > -1) {
-            newStr += vowels[(vowels.indexOf(char) + 1) % 5]
+            str += vowels[(vowels.indexOf(char) + 1) % 5]
         } else {
-            newStr += char
+            str += char
         }
     }
-    return newStr
+    return str
 }
 console.log(vowelShift('hello world'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

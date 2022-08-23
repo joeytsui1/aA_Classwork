@@ -29,8 +29,19 @@ function isUpper(str) {
   return str.toUpperCase() === str;
 }
 
+// function myFind(arr, cb) {
+//   for (let i = 0; i < arr.length; i ++) {
+//     let ele = arr[i]
+
+//     if (cb(ele)) {
+//       return ele
+//     }
+//   }
+//   return undefined
+// }
+
 function myFind(arr, cb) {
-  for (let i = 0; i < arr.length; i ++) {
+  for (let i = 0 ; i < arr.length; i++) {
     let ele = arr[i]
 
     if (cb(ele)) {
@@ -39,7 +50,6 @@ function myFind(arr, cb) {
   }
   return undefined
 }
-
 console.log(myFind([11, 7, 10, 20], isEven))
 console.log(myFind([3, 5, 9], isEven))
 

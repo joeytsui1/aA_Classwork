@@ -13,11 +13,29 @@ threeUniqueVowels('dog'); // => false
 threeUniqueVowels('go home'); // => false
 ***********************************************************************/
 
-function threeUniqueVowels(string) {
-    let vowels = "aeiou".split("")
+// function threeUniqueVowels(string) {
+//     let vowels = "aeiou".split("")
+//     let count = 0
+
+//     for (let i = 0; i < vowels.length; i ++ ) {
+//         let vowel = vowels[i]
+
+//         if (string.includes(vowel)) {
+//             count += 1
+//         }
+
+//         if (count >= 3) {
+//             return true
+//         }
+//     }
+//     return false
+// }
+
+function threeUniqueVowels (string) {
+    let vowels = "aeiou".split('')
     let count = 0
 
-    for (let i = 0; i < vowels.length; i ++ ) {
+    for (let i = 0; i < vowels.length; i++) {
         let vowel = vowels[i]
 
         if (string.includes(vowel)) {
@@ -30,7 +48,6 @@ function threeUniqueVowels(string) {
     }
     return false
 }
-
 console.log(threeUniqueVowels('delicious'))
 console.log(threeUniqueVowels('bootcamp prep'))
 console.log(threeUniqueVowels('dog'))

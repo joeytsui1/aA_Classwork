@@ -68,12 +68,23 @@ let assessments = {
   }
 }
 
-function totalNumProblems(assessments) {
+// function totalNumProblems(assessments) {
+//   let count = 0
+
+//   for (let date in assessments) {
+
+//     for (let i = 0; i < assessments[date].problems.length; i++) {
+//       count += 1
+//     }
+//   }
+//   return count
+// }
+
+function totalNumProblems (assessments) {
   let count = 0
 
-  for (let date in assessments) {
-
-    for (let i = 0; i < assessments[date].problems.length; i++) {
+  for (let key in assessments) {
+    for (let i = 0; i < assessments[key].problems.length; i++ ) {
       count += 1
     }
   }
