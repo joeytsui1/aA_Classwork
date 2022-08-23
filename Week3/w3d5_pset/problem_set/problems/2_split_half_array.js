@@ -22,6 +22,16 @@ function splitHalfArray(array) {
         return [array.slice(0, mid), array.slice(mid + 1)]
     }
 }
+
+function splitHalfArray (array) {
+    let mid = Math.floor(array.length/2)
+
+    if (array.length % 2 === 0) {
+        return [array.slice(0, mid), array.slice(mid)]
+    } else {
+        return [array.slice(0,mid), array.slice(mid + 1)]
+    }
+}
 console.log(splitHalfArray(['a', 'b', 'c', 'd', 'e', 'f']))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = splitHalfArray;

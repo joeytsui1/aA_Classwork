@@ -37,5 +37,17 @@ let object = {}
   return object
 }
 
+function objectSelect (obj, callback) {
+  let object= {}
+
+  for (let key in obj) {
+    let ele = obj[key]
+
+    if (callback(ele, key)) {
+      object[key] = ele
+    }
+  }
+  return object
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = objectSelect;
