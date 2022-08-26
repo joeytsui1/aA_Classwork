@@ -524,3 +524,55 @@ function printUsersWebsitesInfo(users) {
 // printUsersWebsitesInfo(users3); //uncomment when ready to test
 
 //.
+
+
+function anagram (word1, word2) {
+  if (word1.length !== word2.length) {
+    return false
+  }
+
+  let wordCount = {}
+
+  for (let i = 0; i < word1.length; i++) {
+    let char1 = word1[i]
+    let char2 = word2[i]
+
+    if (char1 in wordCount) {
+      wordCount[char1] ++
+    } else {
+      wordCount[char1] = 1
+    }
+
+    if (char2 in wordCount) {
+      wordCount[char2]--
+    } else {
+      wordCount[char2] = -1
+    }
+  }
+    for (let c in wordCount) {
+      if (wordCount[c] !== 0) {
+      return false
+    }
+  } 
+  return true
+}
+
+
+function multiply (num1, num2) {
+  if (num1 === 0) return 0
+
+  return num2 + multiply(num1 - 1, num2)
+}
+
+console.log(multiply(3,5))
+
+let arr = [1,2,3,4,5,6,7,8]
+console.log(arr.map(ele => ele * 2))
+ 
+console.log(arr.map((ele,idx) => {
+  if (idx % 2 ===0) {
+    return ele * 2
+  } else {
+    return ele * -2
+  }
+}))

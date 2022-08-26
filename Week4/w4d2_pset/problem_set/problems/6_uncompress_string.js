@@ -29,5 +29,18 @@ function uncompressString(str) {
     return newStr
 }
 
+function uncompressString(str) {
+    let newStr = ''
+    for(let i = 0; i < str.length; i++){
+        let char = str[i]
+        let num = str[i + 1]
+        for(let j = 0; j < num; j++){
+            newStr += char
+        }
+    }
+    return newStr
+}
+
+console.log(uncompressString('a2b4c1'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = uncompressString;
