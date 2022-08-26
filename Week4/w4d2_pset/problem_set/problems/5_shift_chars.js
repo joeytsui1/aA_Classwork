@@ -36,6 +36,41 @@ function shiftChars(word, num) {
   return str
 }
 
-console.log(shiftChars('able', 1))
+// function shiftChars (word, num) {
+//   var alphabet = [
+//     'a','b','c','d','e','f','g','h','i','j','k','l','m',
+//     'n','o','p','q','r','s','t','u','v','w','x','y','z'
+//   ];
+
+//   let newStr = ''
+
+//   for (let i = 0; i < word.length; i++) {
+//     let char = word[i]
+
+//     if (alphabet.indexOf(char) !== -1) {
+//       newStr += alphabet[(alphabet.indexOf(char) + num) % 26]
+//     }
+//   }
+//   return newStr
+// }
+
+function shiftChars (word, num) {
+  var alphabet = [
+    'a','b','c','d','e','f','g','h','i','j','k','l','m',
+    'n','o','p','q','r','s','t','u','v','w','x','y','z'
+  ];
+
+  let newStr = ''
+
+  for (let i = 0; i < word.length; i++) {
+    let char = word[i]
+    let idx = alphabet.indexOf(char)
+
+    newStr += alphabet[(idx + num) % 26]
+
+  }
+  return newStr
+}
+console.log(shiftChars('ablz', 1))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = shiftChars;
