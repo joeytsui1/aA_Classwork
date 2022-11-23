@@ -14,8 +14,21 @@ isogramMatcher("unpredictably", "hydromagnetic"); //=> [1, 8]
 ***********************************************************************/
 
 function isogramMatcher(string1, string2) {
+    let charInSame = 0
+    let charInDiff = 0
+    
+    for (let i = 0; i < string1.length; i++) {
+        let string1Ele = string1[i]
+        let string2Ele = string2[i]
 
+        if (string1Ele === string2Ele){
+            charInSame += 1
+        } else if (string2.indexOf(string1Ele) !== -1) {
+            charInDiff += 1
+        }
+    }
+    return [charInSame, charInDiff]
 }
-
+console.log(isogramMatcher("an", "at"))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = isogramMatcher;

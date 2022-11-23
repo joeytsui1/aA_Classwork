@@ -20,5 +20,16 @@ function safeSpeedChange(speeds) {
     }return true
 }
 
+function safeSpeedChange (speeds) {
+    for (let i = 0; i < speeds.length; i++) {
+        let num = speeds[i]
+        let nextNum = speeds[i + 1]
+
+        if (Math.abs(num - nextNum) > 5) {
+            return false
+        }
+    }
+    return true
+}
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = safeSpeedChange;

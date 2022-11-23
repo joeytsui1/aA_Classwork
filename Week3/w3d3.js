@@ -576,3 +576,135 @@ console.log(arr.map((ele,idx) => {
     return ele * -2
   }
 }))
+
+
+function spiralOrder(matrix) {
+  let arr = []
+  
+  for (let row = 0; row < matrix.length; row++) {
+      for (let col = 0; col < matrix[row].length; col++) {
+
+      }
+  }
+}
+
+
+function sameCharCollapse (str) {
+  let reducible = true
+
+  while (reducible) {
+    let charArr = str.split('')
+    reducible = false
+
+    for (let i = 0; i < charArr.length-1; i++){
+      if (charArr[i] === charArr[i + 1]) {
+      charArr[i] = ""
+      charArr[i+1] = ""
+      reducible = true
+      }
+    }
+
+    str = charArr.join('') 
+  }
+  return str
+}
+
+console.log(sameCharCollapse("zzzxaaxy"))
+
+// function sameCharCollapse(str) {
+//   let reducible = true;
+
+//   while (reducible) {
+//       let chars = str.split("");
+//       reducible = false;
+
+//       for (let i = 0; i < chars.length - 1; i++) {
+//           if (chars[i] == chars[i+1]) {
+//               chars[i] = "";
+//               chars[i + 1] = "";
+//               reducible = true;
+//           }
+//       }
+//       str = chars.join("");
+//   }
+//   return str;
+// }
+
+
+// function sameCharCollapse (string) {
+//   let reducible = true
+
+//   while (reducible) {
+//     let chars = string.split("")
+//     reducible = false
+
+//     for (let i = 0; i < chars.length; i++) {
+//       if (chars[i] === chars[i+1]) {
+//         chars[i] = ""
+//         chars[i+1] = ""
+//         reducible = true
+//       }
+//     }
+//     string = chars.join('')
+//   }
+//   return string
+// }
+
+// function spinWords(string){
+//   let words = string.split(' ')
+//   let newArr = []
+  
+//   for (let i = 0; i < words.length; i++) {
+//     let word = words[i]
+//     if (word.length >= 5) {
+//       for (let j = word.length-1; j >= 0; j++) {
+
+//         newStr += word[j]
+//         newArr.push(newStr)
+//       } 
+//     } else {
+//       newArr.push(word)
+//     }
+//   }
+//   return newArr.join(" ")
+// }
+
+// console.log(spinWords("Welcome"))
+
+
+var containsDuplicate = function(nums) {
+  let obj = {}
+
+  for (let i = 0; i < nums; i ++) {
+      let num = nums[i]
+      
+      if (obj[num] === undefined) {
+          obj[num] = 1
+      } else {
+          obj[num] += 1
+      }
+  }
+  
+  for (let key in obj) {
+    if (obj[key] >= 2) {
+      return true
+    }
+  }
+  return false
+};
+
+console.log(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))
+
+var twoSum = function(nums, target) {
+  let arr = []
+  for (let i = 0; i < nums.length; i++) {
+      for (let j = i + 1; j < nums.length; j++) {
+          if ((nums[i] + nums[j]) === target) {
+              arr.push([i, j])
+          }
+      }
+  }
+  return arr
+};
+
+console.log(twoSum([2,7,11,15], 9))

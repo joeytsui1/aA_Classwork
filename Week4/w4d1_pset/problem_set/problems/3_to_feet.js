@@ -15,7 +15,27 @@ toFeet(arr2); // => [ '6 feet', '3 feet', '30 feet' ]
 var arr1 = ['10 feet', '3 yards', '5 yards', '3 feet'];
 var arr2 = ['2 yards', '3 feet', '10 yards']
 
-function toFeet(distances) {
+// function toFeet(distances) {
+//     let arr = []
+
+//     for (let i = 0; i < distances.length; i++) {
+//         let distance = distances[i]
+//         let disArr = distance.split(' ')
+//         let num = disArr[0]
+//         let measurement = disArr[1]
+        
+//         if (measurement === "yards") {
+//             let newDistance = num * 3 + " feet"
+
+//             arr.push(newDistance)
+//         } else {
+//             arr.push(distance)
+//         }
+//     }
+//     return arr
+// }
+
+function toFeet (distances) {
     let arr = []
 
     for (let i = 0; i < distances.length; i++) {
@@ -23,10 +43,9 @@ function toFeet(distances) {
         let disArr = distance.split(' ')
         let num = disArr[0]
         let measurement = disArr[1]
-        
+
         if (measurement === "yards") {
             let newDistance = num * 3 + " feet"
-
             arr.push(newDistance)
         } else {
             arr.push(distance)

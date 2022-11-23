@@ -36,7 +36,7 @@ function hasSymmetry(array) {
   return true
 }
 
-// function hasSymmetry (array) {
+// function hasSymmetry (array) { // This function wont work because the j loop will need to finish the whole loop first then the i loop would go to the next index
 //   for (let i = 0; i < array.length; i++) {
 //     let iValue = array[i]
 //     // i = 0

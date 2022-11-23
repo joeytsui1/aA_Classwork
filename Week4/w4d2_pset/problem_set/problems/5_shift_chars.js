@@ -54,20 +54,38 @@ function shiftChars(word, num) {
 //   return newStr
 // }
 
-function shiftChars (word, num) {
+// function shiftChars (word, num) {
+//   var alphabet = [
+//     'a','b','c','d','e','f','g','h','i','j','k','l','m',
+//     'n','o','p','q','r','s','t','u','v','w','x','y','z'
+//   ];
+
+//   let newStr = ''
+
+//   for (let i = 0; i < word.length; i++) {
+//     let char = word[i]
+//     let idx = alphabet.indexOf(char)
+
+//     newStr += alphabet[(idx + num) % 26]
+
+//   }
+//   return newStr
+// }
+
+
+function shiftChars (string, num) {
   var alphabet = [
     'a','b','c','d','e','f','g','h','i','j','k','l','m',
     'n','o','p','q','r','s','t','u','v','w','x','y','z'
   ];
-
   let newStr = ''
 
-  for (let i = 0; i < word.length; i++) {
-    let char = word[i]
-    let idx = alphabet.indexOf(char)
+  for (let i = 0; i < string.length; i ++) {
+    let char = string[i]
 
-    newStr += alphabet[(idx + num) % 26]
-
+    if(alphabet.indexOf(char) > -1) {
+      newStr += alphabet[(alphabet.indexOf(char)+num) % 26]
+    } 
   }
   return newStr
 }

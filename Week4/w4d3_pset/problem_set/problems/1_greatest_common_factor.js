@@ -14,7 +14,11 @@ greatestCommonFactor(45, 30); // => 15
 ***********************************************************************/
 
 function greatestCommonFactor(num1, num2) {
-
+    for (let i = num1; i >= 0; i--) {
+        if (num1 % i === 0 && num2 % i === 0) {
+            return i
+        }
+    }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

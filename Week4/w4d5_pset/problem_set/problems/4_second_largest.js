@@ -13,8 +13,22 @@ secondLargest([]) => -1;
 ***********************************************************************/
 
 function secondLargest(array) {
+    let largest = -1
+    let secondLarge = -1
 
+    for (let i = 0; i < array.length; i++) {
+        let num = array[i]
+
+        if (num > largest) {
+            secondLarge = largest
+            largest = num
+        } else if (num > secondLarge) {
+            secondLarge = num
+        }
+    } 
+    return secondLarge
 }
 
+console.log(secondLargest([3, 1, 5, 4, 7]))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = secondLargest;

@@ -46,6 +46,28 @@ let obj = {
 // }
 
 
+// function winningHand (hand1, hand2) {
+//     let score1 = 0
+//     let score2 = 0
+
+//     for (let i = 0; i < hand1.length; i++) {
+//         let card1 = hand1[i]
+//         let card2 = hand2[i]
+
+//         score1 += obj[card1]
+//         score2 += obj[card2]
+//     }
+
+//     if (score1 === score2) {
+//         return "DRAW"
+//     } else if (score1 > score2) {
+//         return hand1
+//     } else {
+//         return hand2
+//     }
+// }
+
+
 function winningHand (hand1, hand2) {
     let score1 = 0
     let score2 = 0
@@ -57,7 +79,6 @@ function winningHand (hand1, hand2) {
         score1 += obj[card1]
         score2 += obj[card2]
     }
-
     if (score1 === score2) {
         return "DRAW"
     } else if (score1 > score2) {
@@ -66,7 +87,6 @@ function winningHand (hand1, hand2) {
         return hand2
     }
 }
-
 console.log(winningHand('JQKJ', 'QQJJ'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = winningHand;

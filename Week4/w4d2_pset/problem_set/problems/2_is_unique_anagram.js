@@ -28,6 +28,19 @@ function isUniqueAnagram(word1, word2) {
     return true
 }
 
+function isUniqueAnagram (word1, word2) {
+    if (word1.length !== word2.length) return false
+
+    for (let i = 0; i < word1.length; i++) {
+        let char = word1[i]
+
+        if(!word2.includes(char)) {
+            return false
+        }
+    }
+    return true
+}
+
 console.log(isUniqueAnagram('iceman', 'cinema'))
 console.log(isUniqueAnagram('abcd', 'adxb'))
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

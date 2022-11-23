@@ -21,8 +21,21 @@ stopWatch(99999); // => '27:46:39'
 ***********************************************************************/
 
 function stopWatch(totalSeconds) {
+    let secondCount = Math.floor(totalSeconds % 60)
+    if (secondCount < 10) {
+        secondCount = '0'+ secondCount
+    }
+    let minCount = Math.floor(totalSeconds/60) % 60
+    if (minCount < 10) {
+        minCount = '0'+ minCount
+    }
+    let hourCount = Math.floor(totalSeconds/3600)
+    if (hourCount < 10) {
+        hourCount = '0'+ hourCount
+    }
 
+    return hourCount + ':' + minCount + ':' + secondCount
 }
-
+stopWatch(123420)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = stopWatch;

@@ -26,6 +26,7 @@ function minMaxDifference(array){
       min = num
     }
   }
+  
   return sum = max - min
 
 }

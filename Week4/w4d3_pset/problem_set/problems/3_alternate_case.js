@@ -10,7 +10,18 @@ alternateCase('hello'); // => 'HeLlO'
 ***********************************************************************/
 
 function alternateCase(str) {
+    let newWord = ''
 
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i]
+
+        if (i % 2 === 0) {
+            newWord += char.toUpperCase()
+        } else {
+            newWord += char.toLowerCase()
+        }
+    }
+    return newWord
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

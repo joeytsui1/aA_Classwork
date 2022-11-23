@@ -11,16 +11,27 @@ isSorted([9, 4, 1, 5, 6, 2]); // => false
 isSorted([1, 2, 4, 5, 6, 9]); // => true
 ***********************************************************************/
 
-function isSorted(array) {
-    for (let i = 0; i < array.length; i++ ) {
-        let num = array[i]
+// function isSorted(array) {
+//     for (let i = 0; i < array.length; i++ ) {
+//         let num = array[i]
 
-        if (num > array[i + 1]) {
+//         if (num > array[i + 1]) {
+//             return false
+//         }
+//     }
+//     return true
+// }
+
+function isSorted (array) {
+    for (let i = 0; i < array.length; i ++) {
+        let num = array[i]
+        let nextNum = array[i + 1]
+
+        if (num > nextNum) {
             return false
         }
     }
     return true
 }
-
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = isSorted;

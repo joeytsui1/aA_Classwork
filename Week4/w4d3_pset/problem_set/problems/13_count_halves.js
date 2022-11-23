@@ -28,7 +28,9 @@ done!
 ***********************************************************************/
 
 function countHalves(n) {
-
+    if (n < 1) return "done!"
+    console.log(n)
+    return countHalves(n / 2)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

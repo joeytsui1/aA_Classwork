@@ -12,7 +12,7 @@ removeNthLetter('computer', 3); // => 'comuter'
 ***********************************************************************/
 
 function removeNthLetter(word, n) {
-
+    return newWord = word.slice(0,n) + word.slice(n+1)
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

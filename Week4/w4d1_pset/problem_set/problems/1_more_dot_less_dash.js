@@ -11,24 +11,44 @@ moreDotLessDash('.-'); // => false
 moreDotLessDash('..--'); // => false
 ***********************************************************************/
 
-function moreDotLessDash(str) {
+// function moreDotLessDash(str) {
+//     let dotCount = 0
+//     let dashCount = 0
+
+//     for (let i = 0; i < str.length; i++) {
+//         let char = str[i]
+
+//         if (char === ".") {
+//             dotCount += 1
+//         } else if (char === "-") {
+//             dashCount += 1
+//         }
+//     }
+    
+//     if (dashCount > dotCount || dashCount === dotCount) {
+//         return false
+//     }
+//     return true
+// }
+
+function moreDotLessDash (str) {
     let dotCount = 0
     let dashCount = 0
 
     for (let i = 0; i < str.length; i++) {
-        let char = str[i]
+        char = str[i]
 
-        if (char === ".") {
+        if (char === '.') {
             dotCount += 1
-        } else if (char === "-") {
+        } else if (char === '-') {
             dashCount += 1
         }
     }
-    
-    if (dashCount > dotCount || dashCount === dotCount) {
+    if (dashCount >= dotCount) {
         return false
+    } else {
+        return true
     }
-    return true
 }
 console.log(moreDotLessDash('.-.-.'))
 

@@ -11,35 +11,63 @@ canConstruct("a", "aa");              // => true
 canConstruct("ababc", "dbaccab");     // => true
 canConstruct("aabbc", "aaaabbbdef");  // => false
 ***********************************************************************/
-function eleCount(str) {
-    const count = {};
+// function eleCount(str) {
+//     const count = {};
   
-    for (let i = 0; i < str.length; i++) {
-      if (str[i] in count) {
-        count[str[i]]++;
-      } else {
-        count[str[i]] = 1;
-      }
-    }
+//     for (let i = 0; i < str.length; i++) {
+//       if (str[i] in count) {
+//         count[str[i]]++;
+//       } else {
+//         count[str[i]] = 1;
+//       }
+//     }
   
-    return count;
-  }
+//     return count;
+//   }
 
-function canConstruct(ransomNote, magazine) {     
-    const magCount = eleCount(magazine);            
-    const noteCount = eleCount(ransomNote);        
+// function canConstruct(ransomNote, magazine) {     
+//     const magCount = eleCount(magazine);            
+//     const noteCount = eleCount(ransomNote);        
   
-    for (let char in noteCount) {
-      const numLetters = noteCount[char];
+//     for (let char in noteCount) {
+//       const numLetters = noteCount[char];
   
-      if (magCount[char] === undefined || magCount[char] < numLetters) {
-        return false;
-      }
-    }
+//       if (magCount[char] === undefined || magCount[char] < numLetters) {
+//         return false;
+//       }
+//     }
   
-    return true;
-  }
+//     return true;
+//   }
 
+function eleCount (str) {
+  let obj = {}
+
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i]
+
+    if (char in obj) {
+      obj[char] += 1
+    } else {
+      obj[char] = 1
+    }
+  }
+  return obj
+}
+
+function canConstruct (ransom, magazine) {
+  let ransomObj = eleCount(ransom)
+  let magazineObj = eleCount(magazine)
+
+  for (let key in ransomObj) {
+    let letterCount = ransomObj[key]
+
+    if (magazineObj[key] === undefined || magazineObj[key] < letterCount) {
+      return false
+    }
+  }
+  return true
+}
 console.log(canConstruct("a", "b"))
 console.log(canConstruct("a", "aa"))
 console.log(canConstruct("ababc", "dbaccab"))

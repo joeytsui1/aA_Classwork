@@ -12,7 +12,20 @@ nickname('bob'); // => 'BOB-BOB'
 ***********************************************************************/
 
 function nickname(name) {
+    let vowels = "aeiou"
+    let counter = 0
 
+    for (let i = 0; i < name.length; i++) {
+        let char = name[i]
+        if (vowels.includes(char)) {
+            counter += 1
+            if (counter === 2) {
+                return name.slice(0,i+1).toUpperCase() + '-' + name.slice(0,i+1).toUpperCase()
+            }
+        }
+    }
+    return name.toUpperCase() + "-" + name.toUpperCase()
+        
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

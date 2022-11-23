@@ -16,6 +16,8 @@ function range(start, end) {
   return arr
 }
 
+
+
 console.log(range(1,4))
 console.log(range(4,2))
 

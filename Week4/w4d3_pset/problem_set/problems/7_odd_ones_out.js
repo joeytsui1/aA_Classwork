@@ -13,7 +13,25 @@ oddOnesOut(arr2); // => [ 'fish' ]
 ***********************************************************************/
 
 function oddOnesOut(array) {
+    let obj = {}
+    let arr = []
 
+    for (let i = 0; i < array.length; i++) {
+        let ele = array[i]
+
+        if (obj[ele] === undefined) {
+            obj[ele] = 1
+        } else {
+            obj[ele] += 1
+        }
+    }
+
+    for (let key in obj) {
+        if (obj[key] % 2 === 0) {
+            arr.push(key)
+        }
+    }
+    return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

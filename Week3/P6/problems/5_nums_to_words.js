@@ -47,7 +47,6 @@ let numObj = {
 }
 
 function numsToWords (numString) {
-
   let str = ''
 
   for (let i = 0; i < numString; i++ ) {

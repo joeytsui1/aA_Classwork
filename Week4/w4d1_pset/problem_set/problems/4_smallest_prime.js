@@ -49,6 +49,30 @@ function smallestPrime(array) {
     }
     return lowestPrime
 }
+
+function isPrime (num) {
+    if (num < 2) return false
+
+    for (let i = 2; i < num; i++) {
+        if (num % i === 0) return false
+    }
+    return true
+}
+
+function smallestPrime (array) {
+    let smallest = null
+
+    for (let i = 0; i < array.length; i++) {
+        let num = array[i]
+
+        if (isPrime(num)) {
+            if (smallest === null || num < smallest) {
+                smallest = num
+            }
+        }
+    }
+    return smallest
+}
 console.log(smallestPrime(arr1)); // => 5)
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = smallestPrime;

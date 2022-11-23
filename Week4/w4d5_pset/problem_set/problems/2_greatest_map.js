@@ -27,7 +27,20 @@ Hint:
 
 
 function greatestMap(array, cb1, cb2) {
+  let arr = []
 
+  for (let i = 0; i < array.length; i ++ ){
+    let ele = array[i]
+    let result1 = cb1 (ele, i, array)
+    let result2 = cb2 (ele, i, array) 
+
+    if (result1 > result2) {
+      arr.push(result1)
+    } else {
+      arr.push(result2)
+    }
+  }
+  return arr
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
